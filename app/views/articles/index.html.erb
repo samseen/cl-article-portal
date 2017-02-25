@@ -1,0 +1,11 @@
+<h1>Listing all articles</h1>
+  <p><%= link_to "Create new article", new_article_path %></p>
+  <% @articles.each do |article| %>
+    <img src="http://www.placehold.it/100x100" alt="Article thumbnail" />
+    <h1><%= article.title %></h1>
+    <time datetime="2012-01-01">01/01/2012</time>
+    <p><%= article.description %></p>
+    <p><%= link_to "Edit", edit_article_path(article) %></p>
+    <p><%= link_to "Show", article_path(article) %></p>
+  <% end %>
+  
